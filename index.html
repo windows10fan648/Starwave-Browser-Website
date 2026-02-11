@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MyBrowser — Download</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="description" content="Download MyBrowser — a fast, lightweight browser built with C# and a killer UI." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">
+        <!-- simple SVG logo -->
+        <svg width="36" height="36" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.8" />
+          <path d="M6 12c1.5-3 5-4 8-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+        </svg>
+        <span class="brand">MyBrowser</span>
+      </a>
+      <nav class="nav">
+        <a href="#features">Features</a>
+        <a href="#screens">Screens</a>
+        <a href="#changelog" id="openChangelog">Changelog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>MyBrowser — tiny, ruthless, fast.</h1>
+          <p class="lede">A lean C# browser build — focused on performance, fluid UI, and no nonsense. Current: <strong id="currentVersion">v1.2.0</strong></p>
+
+          <div class="download-row">
+            <a id="primaryDownload" class="btn btn-primary" href="#" download>
+              Download Now
+              <span id="primaryMeta" class="meta">Windows x64 · 36 MB</span>
+            </a>
+
+            <div class="alt-links">
+              <a id="downloadWin" class="btn btn-ghost" href="./downloads/MyBrowser-win-x64.exe" download>Windows x64 · 36 MB</a>
+              <a id="downloadPortable" class="btn btn-ghost" href="./downloads/MyBrowser-portable.zip" download>Portable · 34 MB</a>
+            </div>
+          </div>
+
+          <p class="safety">Verified builds: SHA256 checksums available below. Hosted on GitHub Releases.</p>
+        </div>
+
+        <div class="hero-shot">
+          <img src="screens/s1.png" alt="MyBrowser UI preview" width="480" height="320" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="container features">
+      <h2>Why MyBrowser</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Speed-first</h3>
+          <p>Minimal runtime overhead, optimized render loop, built with high-performance C# internals.</p>
+        </article>
+        <article class="card">
+          <h3>Sleek UI</h3>
+          <p>Fluid animations, low memory footprint, and a native-feel control suite.</p>
+        </article>
+        <article class="card">
+          <h3>Portable Builds</h3>
+          <p>Portable zip available — drop it on a USB and run, no install required.</p>
+        </article>
+        <article class="card">
+          <h3>Privacy-friendly</h3>
+          <p>No telemetry by default. Optional opt-in auto-updates controlled by you.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="screens" class="container screens">
+      <h2>Screenshots</h2>
+      <div class="shots">
+        <img src="screens/s1.png" alt="UI 1" loading="lazy">
+        <img src="screens/s2.png" alt="UI 2" loading="lazy">
+        <img src="screens/s3.png" alt="UI 3" loading="lazy">
+      </div>
+    </section>
+
+    <section id="changelog" class="container changelog">
+      <h2>Changelog</h2>
+      <div class="log">
+        <p><strong>v1.2.0</strong> — Feb 11, 2026 — Faster startup, new tab animation, fixes to HTTP cache.</p>
+        <p><strong>v1.1.0</strong> — Jan 20, 2026 — Added portable build, improved GPU compositing.</p>
+        <p><strong>v1.0.0</strong> — Dec 01, 2025 — Initial public release.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year">2026</span> MyBrowser — built with ♥ by Bartek</small>
+      <a href="https://github.com/yourname/mybrowser/releases" target="_blank" rel="noopener">Releases</a>
+    </div>
+  </footer>
+
+  <!-- Changelog modal (hidden by default) -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-panel">
+      <button id="closeModal" class="modal-close" aria-label="Close">✕</button>
+      <h3>Full changelog</h3>
+      <pre id="fullChangelog">v1.2.0 — Feb 11, 2026
+- Faster startup
+- New tab animation
+- HTTP cache improvements
+
+v1.1.0 — Jan 20, 2026
+- Portable build
+- GPU compositing improvements
+
+v1.0.0 — Dec 01, 2025
+- Initial release</pre>
+      <div class="modal-actions">
+        <a href="https://github.com/yourname/mybrowser/releases" target="_blank" class="btn">Open Releases</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js" defer></script>
+</body>
+</html>
